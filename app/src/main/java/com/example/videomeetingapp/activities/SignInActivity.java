@@ -27,16 +27,16 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        HashMap<String, Object> user = new HashMap<>();
-        user.put("first_name", "John");
-        user.put("last_name", "Johnes");
-        user.put("email", "john.johnes@example.com");
-        database.collection("users")
-                .add(user)
-                .addOnSuccessListener(documentReference ->
-                        Toast.makeText(SignInActivity.this, "user inserted", Toast.LENGTH_SHORT).show())
-                .addOnFailureListener(e ->
-                        Toast.makeText(SignInActivity.this, "error adding user", Toast.LENGTH_SHORT).show());
+//        FirebaseFirestore database = FirebaseFirestore.getInstance();
+//        HashMap<String, Object> user = new HashMap<>();
+//        user.put("first_name", "John");
+//        user.put("last_name", "Johnes");
+//        user.put("email", "john.johnes@example.com");
+//        database.collection("users")
+//                .add(user)
+//                .addOnSuccessListener(documentReference ->
+//                        Toast.makeText(SignInActivity.this, "user inserted", Toast.LENGTH_SHORT).show())
+//                .addOnFailureListener(e ->
+//                        Toast.makeText(SignInActivity.this, "error adding user", Toast.LENGTH_SHORT).show());
     }
 }
