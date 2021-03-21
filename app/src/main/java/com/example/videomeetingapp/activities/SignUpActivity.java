@@ -38,8 +38,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         inputFirstName = findViewById(R.id.inputFirstName);
         inputLastName = findViewById(R.id.inputLastName);
-        inputEmail = findViewById(R.id.inputEmail);
-        inputPassword = findViewById(R.id.inputPassword);
+        inputEmail = findViewById(R.id.inputEmailRegistration);
+        inputPassword = findViewById(R.id.inputPasswordRegistration);
         inputConfirmPassword = findViewById(R.id.inputConfirmPassword);
         signUpButton = findViewById(R.id.btnSignUp);
         signUpProgressBar = findViewById(R.id.signUpProgressBar);
@@ -90,7 +90,7 @@ public class SignUpActivity extends AppCompatActivity {
                     signUpButton.setVisibility(View.VISIBLE);
                     signUpProgressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(SignUpActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    ;
+
                 });
     }
 }
