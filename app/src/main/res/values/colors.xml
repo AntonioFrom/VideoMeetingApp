@@ -9,4 +9,5 @@
     <color name="black">#FF000000</color>
     <color name="colorTextIcons">#FFFFFFFF</color>
     <color name="colorBackground">#FAFAFA</color>
+    <color name="colorSecondaryText">#979393</color>
 </resources>
