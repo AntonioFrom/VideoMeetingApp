@@ -24,9 +24,9 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
                 imageMeetingType.setImageResource(R.drawable.ic_video);
             }
         }
-        TextView textFirstChar = findViewById(R.id.textFirstCharMeeting);
-        TextView textUsername = findViewById(R.id.textUserNameMeet);
-        TextView textEmail = findViewById(R.id.textUserEmailMeet);
+        TextView textFirstChar = findViewById(R.id.textFirstCharMeetingOutgoing);
+        TextView textUsername = findViewById(R.id.textUserNameMeetOutgoing);
+        TextView textEmail = findViewById(R.id.textUserEmailMeetOutgoing);
 
         User user = (User) getIntent().getSerializableExtra("user");
         if (user != null) {
