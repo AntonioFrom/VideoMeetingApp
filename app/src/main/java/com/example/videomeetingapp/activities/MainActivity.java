@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements UserListener {
         preferenceManager = new PreferenceManager(getApplicationContext());
         keyUser = preferenceManager.getString(Constants.KEY_USER_ID);
         TextView textView = findViewById(R.id.textTilte);
+
         textView.setText(String.format("%s %s", preferenceManager.getString(Constants.KEY_FIRST_NAME),
                 preferenceManager.getString(Constants.KEY_LAST_NAME)));
         findViewById(R.id.textSignOut).setOnClickListener(v -> {
@@ -129,8 +130,10 @@ public class MainActivity extends AppCompatActivity implements UserListener {
             Toast.makeText(getApplicationContext(), user.firstName + user.lastName +
                     "is not avaibale to meeting", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(getApplicationContext(),
-                    "Video meeting with " + user.firstName + " " + user.lastName, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), OutgoingInvitationActivity.class);
+            intent.putExtra("user", user);
+            intent.putExtra("type", "video");
+            startActivity(intent);
         }
     }
 
