@@ -91,7 +91,6 @@ public class SignUpActivity extends AppCompatActivity {
                     signUpButton.setVisibility(View.VISIBLE);
                     signUpProgressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(SignUpActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-
                 });
     }
 }
